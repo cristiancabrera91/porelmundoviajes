@@ -1,0 +1,467 @@
+*{ margin: 0;
+    padding: 0;
+}
+
+
+h1 { 
+    color: rgb(179, 255, 0);
+    font-family: "Bungee", sans-serif;
+    font-size: 4em;
+    text-align: center;
+    padding: 15px;
+}
+
+h2 {
+    color: darkgreen;
+}
+
+p {
+    color: darkred;
+}
+
+.parrafoDePaquetes {
+    background-color: darkkhaki;
+}
+
+a {
+    text-decoration: none;
+    background-color: rgb(198, 172, 216);
+    color: #000000;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}
+
+nav {
+    margin: 10px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  
+}
+
+/* BOTON INICIO SESION HEADER */
+.inicio-sesion-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;   
+    gap: 5px;
+    padding: 5px;
+}
+
+.botonIniciarSesion {
+    background-color: #a87fac; 
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.imagen-login {
+    width: 30px;
+}
+/* HASTA ACA BOTON INICIO SESION HEADER */
+h3 {
+     color: darkgoldenrod;
+}
+
+.paginas2-3-4-5 {
+    text-align: center;
+    padding: 15px;
+}
+
+.parrafoDescripcionVideo {
+    background-color: rgb(139, 0, 0);
+}
+
+.parrafoDeTestimonio {
+    background-color: bisque;
+}
+
+header {
+     margin: 0 0 20px 0;
+     background-color: rgb(155, 163, 83);
+     padding: 15px;
+}
+
+/* ESTILOS MAIN */
+main {
+    background-color: rgba(202, 189, 2, 0.507);
+    margin: 0 0 20px 0;
+    padding: 0 0 20px 0;
+    box-sizing: content-box; 
+}
+   
+
+.imagenUsuarioTestimonios {
+    width: 30px; 
+    margin: 15px;   
+}
+
+/* ESTILOS MAIN INDEX */
+.cardsPaquetes {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 60%;
+    padding: 10px;
+    border: solid 3px darkgoldenrod;
+    border-radius: 10px;
+    margin: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.904);
+    box-sizing: content-box;
+}
+
+.imagenPaquetes {
+  width: 100%;
+  object-fit: cover; 
+  display: block;
+  border-radius: 4px;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.cardsDestinos {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    text-align: center;
+    padding: 10px;
+    border: solid 3px darkgoldenrod;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: #fff;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.904);
+    object-fit: cover;
+    box-sizing: border-box
+}
+
+.videoDestinos {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.destinos-section {
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.cardsTestimonios {
+  display: flex;
+  flex-wrap: nowrap;
+  word-break: break-word;
+  align-items: center;
+  border: 3px solid #e9b60d;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.904);
+  max-width: 500px;
+  flex: 1 1 300px;
+  box-sizing: content-box
+}
+
+
+.contenedor-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    "paquetes paquetes video video"
+    "paquetes paquetes video video"
+    "vuelos vuelos testimonios testimonios";
+    gap: 15x;
+    padding: 15px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.paquetes-section {
+    grid-area: paquetes; 
+}
+
+.destinos-section {
+    grid-area: video;
+}
+
+.testimonios-section {
+    grid-area: testimonios; 
+   
+}
+
+.vuelos-section {
+    grid-area: vuelos;
+}
+
+.paquetes-section .paquetes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    justify-items: start;
+}
+
+.vuelos-section .paquetes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10px;
+    justify-items: start;
+}
+
+.cards-vuelos {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 60%;
+    padding: 10px;
+    border: solid 3px darkgoldenrod;
+    border-radius: 10px;
+    margin: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.904);
+    box-sizing: content-box
+}
+
+.flexTituloSection {
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
+
+.testimonios-container {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px; 
+    width: 100%;
+}
+
+.buttom-testimonios {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/*HASTA ACA ESTILOS MAIN INDEX*/
+
+/* ESTILOS SECCIÓN FOOTER*/
+
+footer {
+background-color: rgb(155, 163, 83);
+}
+
+.imagen-footer {
+    width: 30px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.imagen-footer:hover {
+    transform: scale(1.1)
+}
+
+.links-footer {
+    background-color: transparent;
+}
+
+.footer-container {
+    display: flex;                     
+    justify-content: space-around;  
+    align-items: flex-start;         
+    margin-bottom: 20px;             
+}
+
+.footer-right {
+    display: flex;
+    gap: 30px; 
+}
+
+.info-item {
+    text-align: center;
+}
+
+.footer-column h3 {
+    padding: 5px;
+    margin-bottom: 15px;
+    font-family: sans-serif;
+    color: #333;
+}
+
+.social-links {
+    display: flex;       
+    list-style: none;    
+    gap: 35px;           
+}
+
+.copyright {
+    text-align: center; 
+    margin: 0;
+    padding: 8px;
+    color: #020000;
+    font-size: 18px;
+}
+/* HASTA ACA ESTILOS FOOTER*/
+
+/* PAGINA PAQUETES*/
+.boton-comprar-paquetes {
+    margin: 15px;
+    background-color: hsl(0, 0%, 95%);
+    color: #000000;
+    border-color: #000000;
+    width: 30%;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.boton-comprar-paquetes:hover {
+    border-color: #000000;
+    background-color:rgb(0, 255, 0)
+ 
+}
+
+.card-pag-paquetes {
+    width: 70%;
+    max-width: 400px;
+    padding: 5px;
+    border: solid 3px darkgoldenrod;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: #fff;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.904);
+    object-fit: cover;
+    box-sizing: border-box
+}
+
+/*Estilos PAG QUIENES SOMOS */
+
+.flex-staff-quienessomos {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around
+}
+
+.titulo-staff-quienesomos {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+/*Estilos PAG TESTIMONIOS */
+
+.flex-testimonios-pag {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 10;
+}
+
+.imagen-pag-testimonios {
+    margin-right: 30px;
+    width: 100px;
+}
+
+.tarjeta-pag-testimonios {
+    display: flex;
+    align-items: center;
+    margin: 15px;
+    padding: 10px;
+    border: solid rgb(161, 0, 0)
+}
+
+/* MODO RESPONSIVE MOBILE HEADER INDEX*/ 
+
+        
+@media (max-width:425px) {
+    ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px
+    }
+
+    .inicio-sesion-flex{
+        flex-direction: column;
+    }
+
+/* ESTIILOS VERSION MOBILE MAIN INDEX*/
+    
+    .contenedor-grid {
+        grid-template-columns: 1fr; 
+        grid-template-areas:  
+            "paquetes"
+            "video"
+            "testimonios"
+            "vuelos";
+        gap: 20px; 
+}
+
+     .paquetes-section .paquetes-grid,
+     .vuelos-section .paquetes-grid {
+     grid-template-columns: 1fr;
+     justify-items: center; 
+ }
+
+    .cardsPaquetes,
+     .cards-vuelos {
+     width: 85%; 
+ }
+
+     .cardsTestimonios {
+     flex-direction: column;
+     text-align: center;
+ }
+
+     .footer-container {
+     flex-direction: column; 
+     align-items: center;  
+     gap: 30px;   
+ }
+
+     .footer-column {
+     text-align: center;
+ }
+
+     .social-links {
+     justify-content: center;
+     flex-direction: row;
+    }
+}
+
+/* MODO DESKTOP PAGINA PAQUETES */ 
+@media (min-width: 768px) {
+    .card-pag-paquetes {
+        width: 30%;
+        max-width: none; 
+    }
+}
+
+/* MODO MOBILE PAGINA QUIENES SOMOS */
+
+@media (max-width:425px) {
+    .flex-staff-quienessomos {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* MODO MOBILE PAGINA testimonios */
+
+@media (max-width: 768px) { 
+    .tarjeta-pag-testimonios {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .imagen-pag-testimonios {
+        margin-right: 0; 
+        margin-bottom: 15px; 
+    }
+}
