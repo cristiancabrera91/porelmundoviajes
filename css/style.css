@@ -445,7 +445,7 @@ background-color: rgb(155, 163, 83);
 
 /* MODO MOBILE PAGINA QUIENES SOMOS */
 
-@media (max-width:425px) {
+@media (max-width:768px) {
     .flex-staff-quienessomos {
         flex-direction: column;
         gap: 15px;
