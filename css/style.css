@@ -405,6 +405,7 @@ background-color: rgb(155, 163, 83);
 
     .inicio-sesion-flex {
         margin-top: 20px; 
+        flex-direction: column;
  }
      
 
