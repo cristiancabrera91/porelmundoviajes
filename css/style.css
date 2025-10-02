@@ -379,9 +379,6 @@ background-color: rgb(155, 163, 83);
 
 /* MODO RESPONSIVE MOBILE HEADER INDEX*/ 
 
-   /* --- ESTILOS PARA MÓVILES --- */
-
-/* Se aplica a pantallas con un ancho máximo de 768px */
 @media (max-width: 768px) {
 
     header {
@@ -409,7 +406,7 @@ background-color: rgb(155, 163, 83);
     .inicio-sesion-flex {
         margin-top: 20px; 
  }
-}     
+     
 
 
 /* ESTIILOS VERSION MOBILE MAIN INDEX*/
@@ -443,7 +440,7 @@ background-color: rgb(155, 163, 83);
      .footer-container {
      flex-direction: column; 
      align-items: center;  
-     gap: 30px;   
+     gap: 15px;   
  }
 
      .footer-column {
@@ -454,7 +451,7 @@ background-color: rgb(155, 163, 83);
      justify-content: center;
      flex-direction: row;
     }
-
+}
 
 /* MODO DESKTOP PAGINA PAQUETES */ 
 @media (min-width: 768px) {
