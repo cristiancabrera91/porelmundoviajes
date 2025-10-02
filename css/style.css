@@ -379,17 +379,38 @@ background-color: rgb(155, 163, 83);
 
 /* MODO RESPONSIVE MOBILE HEADER INDEX*/ 
 
-        
-@media (max-width:425px) {
-    ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px
-    }
+   /* --- ESTILOS PARA MÓVILES --- */
 
-    .inicio-sesion-flex{
-        flex-direction: column;
-    }
+/* Se aplica a pantallas con un ancho máximo de 768px */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column; 
+        align-items: center; 
+        padding: 15px; 
+        text-align: center;
+}
+
+     h1 {
+        font-size: 1.8rem;  
+        margin-bottom: 20px;
+        order: -1; 
+}
+
+    nav ul {
+        flex-direction: column; 
+        padding: 0; 
+}
+
+    nav li {
+        margin: 10px 0; 
+}
+
+    .inicio-sesion-flex {
+        margin-top: 20px; 
+ }
+}     
+
 
 /* ESTIILOS VERSION MOBILE MAIN INDEX*/
     
