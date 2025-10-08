@@ -1,5 +1,11 @@
-@use "variables";
-@use "mixins";
-@use "base";
-@use "layout";
-@use "componentes"
+// main.scss
+
+// 💡 Uso de @use: Los archivos ahora se cargan con un namespace (ej. variables, mixins).
+// Las variables, mixins y funciones de cada archivo solo están disponibles a través de ese namespace.
+// El @use también carga el CSS de los archivos que lo contienen (ej. _base, _layout, _components).
+
+@use 'variables' as var; // Ahora todas las variables se acceden como var.$nombre-variable
+@use 'mixins' as mix;   // Ahora todos los mixins se acceden como @include mix.nombre-mixin
+@use 'base';           // No necesita namespace si solo contiene CSS que debe ser cargado
+@use 'layout';         // No necesita namespace si solo contiene CSS que debe ser cargado
+@use 'components';     // No necesita namespace si solo contiene CSS que debe ser cargado
