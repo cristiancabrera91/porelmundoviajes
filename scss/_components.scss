@@ -1,0 +1,72 @@
+// _components.scss
+
+@use 'variables' as var;
+@use 'mixins' as mix;
+
+
+// Extend para estilos base de las tarjetas
+%card-base {
+  background-color: var.$card-bg;
+  border: 3px solid var.$secondary-color;
+  border-radius: 10px;
+  box-shadow: var.$shadow-strong;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.cardsPaquetes, .cards-vuelos {
+  @extend %card-base;
+  width: 60%;
+  
+  @include mix.mobile { 
+    width: 85%;
+  }
+}
+
+.cardsDestinos {
+  @extend %card-base;
+  height: 80%;
+}
+
+.cardsTestimonios {
+  @extend %card-base;
+  @include mix.flexbox(row, flex-start, center); 
+  border-color: var.$border-card-testimonios;
+  max-width: 500px;
+  flex: 1 1 300px;
+  
+  @include mix.mobile { 
+    flex-direction: column;
+  }
+}
+
+
+
+.boton-comprar-paquetes {
+  margin: 15px;
+  background-color: map-get(var.$button-styles, bg); 
+  color: map-get(var.$button-styles, text);
+  border-color: map-get(var.$button-styles, border);
+  width: 30%;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+  font-family: var.$font-secondary; 
+  
+  &:hover {
+    background-color: map-get(var.$button-styles, bg-hover);
+    border-color: map-get(var.$button-styles, border-hover);
+  }
+}
+
+
+.inicio-sesion-flex {
+  @include mix.flexbox(row, flex-end, center, 5px); 
+  padding: 5px;
+  
+  @include mix.mobile { 
+    margin-top: 20px;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
