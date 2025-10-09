@@ -1,0 +1,52 @@
+// _base.scss
+
+@use 'variables' as var;
+@use 'mixins' as mix;
+
+// Reseteo básico
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+// Bucle para generar estilos de encabezados
+@for $i from 1 through 3 {
+  h#{$i} {
+    font-family: var.$font-primary; 
+    padding: 15px;
+  }
+}
+
+h1 {
+  color: var.$primary-color; 
+  font-size: 4em;
+  text-align: center;
+  
+  @include mix.mobile { 
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    order: -1;
+  }
+}
+
+h2 {
+  color: var.$text-h2; 
+}
+
+h3 {
+  color: var.$secondary-color; 
+}
+
+p {
+  color: var.$text-p; 
+}
+
+a {
+  text-decoration: none;
+  background-color: rgb(198, 172, 216);
+  color: var.$text-dark; 
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+}
