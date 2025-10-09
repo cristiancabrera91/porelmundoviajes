@@ -2,12 +2,10 @@
 
 
 
-// Fuentes
+//Fuentes
 
 $font-primary: "Bungee", sans-serif;
-
 $font-secondary: Arial, Helvetica, sans-serif;
-
 $font-default: sans-serif;
 
 
@@ -15,43 +13,27 @@ $font-default: sans-serif;
 // Paleta de Colores
 
 $primary-color: rgb(179, 255, 0);
-
 $secondary-color: darkgoldenrod;
-
 $header-footer-bg: rgb(155, 163, 83);
-
 $main-bg: rgba(202, 189, 2, 0.507);
-
 $card-bg: #fff;
-
 $text-dark: #000;
-
 $text-light: #fff;
-
 $text-h2: darkgreen;
-
 $text-p: darkred;
-
 $border-card-testimonios: #e9b60d;
-
 $shadow-strong: 0 5px 8px rgba(0, 0, 0, 0.9);
 
 
 
 // Mapa para estilos de botones
 
-// Usaremos esto para el botón de "comprar"
-
 $button-styles: (
 
  bg: hsl(0, 0%, 95%),
-
  text: $text-dark,
-
  border: $text-dark,
-
  bg-hover: rgb(0,255, 0),
-
  border-hover:
 
 $text-dark
