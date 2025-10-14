@@ -1,5 +1,3 @@
-// _layout.scss
-
 @use 'variables' as var;
 @use 'mixins' as mix;
 
@@ -62,4 +60,13 @@ footer {
     list-style: none;
   }
   
+  // REGLA PARA LAS IMÁGENES DEL FOOTER
+  .imagen-footer {
+    width: 30px;
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
 }
