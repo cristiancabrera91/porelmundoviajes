@@ -1,0 +1,12 @@
+# Archivos de Sistema Operativo y Logs
+ntuser.dat*
+*.log
+*.blf
+*.regtrans-ms
+vmlogs/
+
+# Archivos de configuración de VS Code
+.vscode/
+
+# Dependencias de Node.js (si usas JavaScript)
+node_modules/
