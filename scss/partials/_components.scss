@@ -1,8 +1,10 @@
+@use 'sass:color';
 @use 'variables' as *;
 @use 'mixins';
-// ===== COMPONENTES =====
 
-// Placeholder para compartir estilos base de todas las cards
+// COMPONENTES
+
+// estilos base de todas las cards
 %card-base {
     padding: 10px;
     border: $card-border;
@@ -13,7 +15,7 @@
     overflow: hidden;
 }
 
-// ----- Estilos de Cards -----
+// Estilos de Cards
 .cardsPaquetes {
     @extend %card-base;
     display: flex;
@@ -21,6 +23,7 @@
     text-align: center;
     width: 60%;
     box-sizing: content-box;
+    align-items: center;
 
     .imagenPaquetes {
         width: 100%;
@@ -28,6 +31,23 @@
         border-radius: 4px;
         overflow: hidden;
         object-fit: cover;
+    }
+
+    h3 {
+        margin: 0;
+        padding-top: 15px;
+        font-size: 1rem;
+        font-weight: normal;
+
+        a {
+            display: inline-block;
+            background-color: #c3b1e1;
+            color: $color-text-dark;
+            padding: 8px 25px;
+            border-radius: $border-radius-large;
+            text-decoration: none;
+            border: 1px solid color.adjust(#c3b1e1, $lightness: -10%);
+        }
     }
 }
 
@@ -39,6 +59,7 @@
     text-align: center;
     object-fit: cover;
     box-sizing: border-box;
+    align-items: center;
 
     .videoDestinos {
         height: 100%;
@@ -46,12 +67,28 @@
         overflow: hidden;
         object-fit: cover;
     }
+
+    h3 {
+        margin: 0;
+        padding-top: 15px;
+        font-size: 1rem;
+        font-weight: normal;
+
+        a {
+            display: inline-block;
+            background-color: #c3b1e1;
+            color: $color-text-dark;
+            padding: 8px 25px;
+            border-radius: $border-radius-large;
+            text-decoration: none;
+            border: 1px solid color.adjust(#c3b1e1, $lightness: -10%);
+        }
+    }
 }
 
 .cardsTestimonios {
     @extend %card-base;
-    // Esta es la forma correcta y explícita
-@include mixins.flex-config(row, flex-start, center);
+    @include mixins.flex-config(row, flex-start, center);
     flex-wrap: nowrap;
     word-break: break-word;
     border: $card-border-testimonios;
@@ -68,15 +105,32 @@
     text-align: center;
     width: 60%;
     box-sizing: content-box;
+    align-items: center;
 
-    img { // Asumiendo que las imágenes dentro de las cards de vuelos son etiquetas <img>
+    img {
         width: 100%;
         object-fit: cover;
         display: block;
         border-radius: 4px;
-        overflow: hidden; // Esto podría ser redundante en <img> pero lo mantengo por fidelidad al original
+        overflow: hidden;
     }
 
+    h3 {
+        margin: 0;
+        padding-top: 15px;
+        font-size: 1rem;
+        font-weight: normal;
+
+        a {
+            display: inline-block;
+            background-color: #c3b1e1;
+            color: $color-text-dark;
+            padding: 8px 25px;
+            border-radius: $border-radius-large;
+            text-decoration: none;
+            border: 1px solid color.adjust(#c3b1e1, $lightness: -10%);
+        }
+    }
 }
 
 .card-pag-paquetes {
@@ -86,14 +140,13 @@
     object-fit: cover;
     box-sizing: border-box;
 
-    // Media query anidado para la versión desktop
     @media (min-width: 768px) {
         width: 30%;
         max-width: none;
     }
 }
 
-// ----- Estilos de Botones -----
+// Estilos de Botones 
 .botonIniciarSesion {
     background-color: $btn-login-bg;
     border-radius: $border-radius-large;
@@ -109,7 +162,7 @@
     box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
     font-family: $font-body;
 
-    &:hover { // Anidación del pseudo-selector :hover
+    &:hover {
         border-color: $btn-comprar-border;
         background-color: $btn-comprar-bg-hover;
     }
@@ -118,9 +171,25 @@
 .buttom-testimonios {
     @include mixins.flex-config(row, center, center);
     padding: 20px;
+
+    h3 {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: normal;
+
+        a {
+            display: inline-block;
+            background-color: #c3b1e1;
+            color: $color-text-dark;
+            padding: 8px 25px;
+            border-radius: $border-radius-large;
+            text-decoration: none;
+            border: 1px solid color.adjust(#c3b1e1, $lightness: -10%);
+        }
+    }
 }
 
-// ----- Otros Componentes -----
+// Mas Componentes
 .parrafoDePaquetes {
     background-color: $bg-parrafo-paquetes;
 }
