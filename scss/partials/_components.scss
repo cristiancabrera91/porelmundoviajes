@@ -1,0 +1,134 @@
+@use 'variables' as *;
+@use 'mixins';
+// ===== COMPONENTES =====
+
+// Placeholder para compartir estilos base de todas las cards
+%card-base {
+    padding: 10px;
+    border: $card-border;
+    border-radius: $border-radius-large;
+    margin: 10px;
+    background-color: $card-bg;
+    box-shadow: $card-shadow;
+    overflow: hidden;
+}
+
+// ----- Estilos de Cards -----
+.cardsPaquetes {
+    @extend %card-base;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 60%;
+    box-sizing: content-box;
+
+    .imagenPaquetes {
+        width: 100%;
+        display: block;
+        border-radius: 4px;
+        overflow: hidden;
+        object-fit: cover;
+    }
+}
+
+.cardsDestinos {
+    @extend %card-base;
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    text-align: center;
+    object-fit: cover;
+    box-sizing: border-box;
+
+    .videoDestinos {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        object-fit: cover;
+    }
+}
+
+.cardsTestimonios {
+    @extend %card-base;
+    // Esta es la forma correcta y explícita
+@include mixins.flex-config(row, flex-start, center);
+    flex-wrap: nowrap;
+    word-break: break-word;
+    border: $card-border-testimonios;
+    max-width: 500px;
+    flex: 1 1 300px;
+    box-sizing: content-box;
+}
+
+.cards-vuelos {
+    @extend %card-base;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 60%;
+    box-sizing: content-box;
+
+    img { // Asumiendo que las imágenes dentro de las cards de vuelos son etiquetas <img>
+        width: 100%;
+        object-fit: cover;
+        display: block;
+        border-radius: 4px;
+        overflow: hidden; // Esto podría ser redundante en <img> pero lo mantengo por fidelidad al original
+    }
+
+}
+
+.card-pag-paquetes {
+    @extend %card-base;
+    width: 70%;
+    max-width: 400px;
+    object-fit: cover;
+    box-sizing: border-box;
+
+    // Media query anidado para la versión desktop
+    @media (min-width: 768px) {
+        width: 30%;
+        max-width: none;
+    }
+}
+
+// ----- Estilos de Botones -----
+.botonIniciarSesion {
+    background-color: $btn-login-bg;
+    border-radius: $border-radius-large;
+    padding: 10px;
+}
+
+.boton-comprar-paquetes {
+    margin: 15px;
+    background-color: $btn-comprar-bg;
+    color: $color-text-dark;
+    border-color: $btn-comprar-border;
+    width: 30%;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+    font-family: $font-body;
+
+    &:hover { // Anidación del pseudo-selector :hover
+        border-color: $btn-comprar-border;
+        background-color: $btn-comprar-bg-hover;
+    }
+}
+
+.buttom-testimonios {
+    @include mixins.flex-config(row, center, center);
+    padding: 20px;
+}
+
+// ----- Otros Componentes -----
+.parrafoDePaquetes {
+    background-color: $bg-parrafo-paquetes;
+}
+
+.parrafoDescripcionVideo {
+    background-color: $bg-parrafo-video;
+}
+
+.parrafoDeTestimonio {
+    background-color: $bg-parrafo-testimonio;
+}

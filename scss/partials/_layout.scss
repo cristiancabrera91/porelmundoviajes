@@ -1,0 +1,280 @@
+@use 'variables' as *;
+@use 'mixins';
+// --- Header ---
+header {
+    margin: 0 0 20px 0;
+    background-color: $color-header-footer-bg;
+    padding: 15px;
+
+    nav {
+        margin: 10px;
+        ul {
+            list-style: none;
+            @include mixins.flex-config(row, space-evenly);
+        }
+    }
+
+    .inicio-sesion-flex {
+        @include mixins.flex-config(row, flex-end, center);
+        gap: 5px;
+        padding: 5px;
+
+        .imagen-login {
+            width: $img-login-width;
+        }
+    }
+
+    // Media query para mobile anidada
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            order: -1;
+        }
+
+        nav ul {
+            flex-direction: column;
+            padding: 0;
+
+            li {
+                margin: 10px 0;
+            }
+        }
+
+        .inicio-sesion-flex {
+            margin-top: 20px;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+}
+
+// --- Main ---
+main {
+    background-color: $color-main-bg;
+    margin: 0 0 20px 0;
+    padding: 0 0 20px 0;
+    box-sizing: content-box;
+
+    .imagenUsuarioTestimonios {
+        width: 30px;
+        margin: 15px;
+    }
+}
+
+// --- Grid Layout ---
+.contenedor-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+        "paquetes paquetes video video"
+        "paquetes paquetes video video"
+        "vuelos vuelos testimonios testimonios";
+    gap: 15px;
+    padding: 15px;
+    overflow: hidden;
+    object-fit: cover;
+
+    // Media query anidada para la grilla
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "paquetes"
+            "video"
+            "testimonios"
+            "vuelos";
+        gap: 20px;
+    }
+}
+
+// Secciones del Grid
+.paquetes-section {
+    grid-area: paquetes;
+    .paquetes-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        justify-items: start;
+    }
+}
+
+.destinos-section {
+    grid-area: video;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.testimonios-section {
+    grid-area: testimonios;
+}
+
+.vuelos-section {
+    grid-area: vuelos;
+    .paquetes-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 10px;
+        justify-items: start;
+    }
+}
+
+// Media query compartida para las secciones del grid
+@media (max-width: 768px) {
+    .paquetes-section .paquetes-grid,
+    .vuelos-section .paquetes-grid {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .cardsPaquetes, .cards-vuelos {
+        width: 85%;
+    }
+    .cardsTestimonios {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+// Contenedores Flex
+.flexTituloSection {
+    @include mixins.flex-config
+ (row, center);
+    margin: 15px;
+}
+
+.testimonios-container {
+    @include mixins.flex-config
+ (row, center);
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+}
+
+// --- Footer ---
+footer {
+    background-color: $color-header-footer-bg;
+
+    .footer-container {
+        @include mixins.flex-config
+ (row, space-around, flex-start);
+        margin-bottom: 20px;
+    }
+
+    .footer-right {
+        display: flex;
+        gap: 30px;
+    }
+
+    .info-item {
+        text-align: center;
+    }
+
+    .footer-column h3 {
+        padding: 5px;
+        margin-bottom: 15px;
+        font-family: sans-serif;
+        color: $color-text-footer-h3;
+    }
+
+    .social-links {
+        @include mixins.flex-config
+ (row);
+        list-style: none;
+        gap: 35px;
+    }
+
+    .links-footer {
+        background-color: transparent;
+    }
+
+    .imagen-footer {
+        width: 30px;
+        transition: transform 0.2s ease-in-out;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    .copyright {
+        text-align: center;
+        margin: 0;
+        padding: 8px;
+        color: $color-text-copyright;
+        font-size: 18px;
+    }
+
+    // Media query anidada para el footer
+    @media (max-width: 768px) {
+        .footer-container {
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        .footer-column {
+            text-align: center;
+        }
+        .social-links {
+            justify-content: center;
+        }
+    }
+}
+
+// --- Estilos Específicos de Páginas ---
+
+// Página "Paquetes"
+.paginas2-3-4-5 {
+    text-align: center;
+    padding: 15px;
+}
+
+// Página "Quiénes Somos"
+.titulo-staff-quienesomos {
+    @include mixins.flex-config
+ (row, center);
+    padding: 15px;
+}
+
+.flex-staff-quienessomos {
+    @include mixins.flex-config
+ (row, space-around, center);
+    width: 100%;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+// Página "Testimonios"
+.flex-testimonios-pag {
+    @include mixins.flex-config
+ (row, flex-start, stretch);
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 10px; // Corregido de '10' a '10px'
+}
+
+.tarjeta-pag-testimonios {
+    @include mixins.flex-config
+ (row, flex-start, center);
+    margin: 15px;
+    padding: 10px;
+    border: $card-border-pag-testimonios;
+
+    .imagen-pag-testimonios {
+        margin-right: 30px;
+        width: 100px;
+    }
+    
+    @media (max-width: 768px) {
+        flex-direction: column;
+        
+        .imagen-pag-testimonios {
+            margin-right: 0;
+            margin-bottom: 15px;
+        }
+    }
+}

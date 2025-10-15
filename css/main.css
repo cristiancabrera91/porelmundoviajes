@@ -1,36 +1,14 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-h1 {
-  font-family: "Bungee", sans-serif;
-  padding: 15px;
-}
-
-h2 {
-  font-family: "Bungee", sans-serif;
-  padding: 15px;
-}
-
-h3 {
-  font-family: "Bungee", sans-serif;
-  padding: 15px;
 }
 
 h1 {
   color: rgb(179, 255, 0);
+  font-family: "Bungee", sans-serif;
   font-size: 4em;
   text-align: center;
-}
-
-@media (max-width: 768px) {
-  h1 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    order: -1;
-  }
+  padding: 15px;
 }
 
 h2 {
@@ -48,112 +26,50 @@ p {
 a {
   text-decoration: none;
   background-color: rgb(198, 172, 216);
-  color: #000;
+  color: #000000;
   border-radius: 5px;
   padding: 5px;
   margin: 5px;
 }
 
-header, footer {
-  background-color: rgb(155, 163, 83);
-  padding: 15px;
-  margin-bottom: 20px;
-}
-
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-}
-
-nav {
-  margin: 10px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  gap: 0;
-}
-
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    padding: 0;
-  }
-  nav ul li {
-    margin: 10px 0;
-  }
-}
-
-main {
-  background-color: rgba(202, 189, 2, 0.507);
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-}
-
-footer .footer-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: flex-start;
-  gap: 0;
-  margin-bottom: 20px;
-}
-
-@media (max-width: 768px) {
-  footer .footer-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-  }
-}
-
-footer .footer-right {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-}
-
-footer .social-links {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 35px;
-  list-style: none;
-}
-
-.cardsTestimonios, .cardsDestinos, .cardsPaquetes, .cards-vuelos {
-  background-color: #fff;
+.card-pag-paquetes, .cards-vuelos, .cardsTestimonios, .cardsDestinos, .cardsPaquetes {
+  padding: 10px;
   border: 3px solid darkgoldenrod;
   border-radius: 10px;
-  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.9);
   margin: 10px;
-  padding: 10px;
-  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.904);
   overflow: hidden;
 }
 
-.cardsPaquetes, .cards-vuelos {
+.cardsPaquetes {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
   width: 60%;
+  box-sizing: content-box;
 }
-
-@media (max-width: 768px) {
-  .cardsPaquetes, .cards-vuelos {
-    width: 85%;
-  }
+.cardsPaquetes .imagenPaquetes {
+  width: 100%;
+  display: block;
+  border-radius: 4px;
+  overflow: hidden;
+  object-fit: cover;
 }
 
 .cardsDestinos {
+  display: flex;
+  flex-direction: column;
   height: 80%;
+  text-align: center;
+  object-fit: cover;
+  box-sizing: border-box;
+}
+.cardsDestinos .videoDestinos {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  object-fit: cover;
 }
 
 .cardsTestimonios {
@@ -161,34 +77,99 @@ footer .social-links {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  gap: 0;
-  border-color: #e9b60d;
+  flex-wrap: nowrap;
+  word-break: break-word;
+  border: 3px solid #e9b60d;
   max-width: 500px;
   flex: 1 1 300px;
+  box-sizing: content-box;
 }
 
-@media (max-width: 768px) {
-  .cardsTestimonios {
-    flex-direction: column;
+.cards-vuelos {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 60%;
+  box-sizing: content-box;
+}
+.cards-vuelos img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.card-pag-paquetes {
+  width: 70%;
+  max-width: 400px;
+  object-fit: cover;
+  box-sizing: border-box;
+}
+@media (min-width: 768px) {
+  .card-pag-paquetes {
+    width: 30%;
+    max-width: none;
   }
+}
+
+.botonIniciarSesion {
+  background-color: #a87fac;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .boton-comprar-paquetes {
   margin: 15px;
   background-color: hsl(0, 0%, 95%);
-  color: #000;
-  border-color: #000;
+  color: #000000;
+  border-color: #000000;
   width: 30%;
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
   font-family: Arial, Helvetica, sans-serif;
 }
-
 .boton-comprar-paquetes:hover {
+  border-color: #000000;
   background-color: rgb(0, 255, 0);
-  border-color: #000;
 }
 
-.inicio-sesion-flex {
+.buttom-testimonios {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.parrafoDePaquetes {
+  background-color: darkkhaki;
+}
+
+.parrafoDescripcionVideo {
+  background-color: rgb(139, 0, 0);
+}
+
+.parrafoDeTestimonio {
+  background-color: bisque;
+}
+
+header {
+  margin: 0 0 20px 0;
+  background-color: rgb(155, 163, 83);
+  padding: 15px;
+}
+header nav {
+  margin: 10px;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: stretch;
+}
+header .inicio-sesion-flex {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -196,12 +177,243 @@ footer .social-links {
   gap: 5px;
   padding: 5px;
 }
-
+header .inicio-sesion-flex .imagen-login {
+  width: 30px;
+}
 @media (max-width: 768px) {
-  .inicio-sesion-flex {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    order: -1;
+  }
+  header nav ul {
+    flex-direction: column;
+    padding: 0;
+  }
+  header nav ul li {
+    margin: 10px 0;
+  }
+  header .inicio-sesion-flex {
     margin-top: 20px;
     flex-direction: column;
     justify-content: center;
+  }
+}
+
+main {
+  background-color: rgba(202, 189, 2, 0.507);
+  margin: 0 0 20px 0;
+  padding: 0 0 20px 0;
+  box-sizing: content-box;
+}
+main .imagenUsuarioTestimonios {
+  width: 30px;
+  margin: 15px;
+}
+
+.contenedor-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "paquetes paquetes video video" "paquetes paquetes video video" "vuelos vuelos testimonios testimonios";
+  gap: 15px;
+  padding: 15px;
+  overflow: hidden;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .contenedor-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas: "paquetes" "video" "testimonios" "vuelos";
+    gap: 20px;
+  }
+}
+
+.paquetes-section {
+  grid-area: paquetes;
+}
+.paquetes-section .paquetes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  justify-items: start;
+}
+
+.destinos-section {
+  grid-area: video;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.testimonios-section {
+  grid-area: testimonios;
+}
+
+.vuelos-section {
+  grid-area: vuelos;
+}
+.vuelos-section .paquetes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 10px;
+  justify-items: start;
+}
+
+@media (max-width: 768px) {
+  .paquetes-section .paquetes-grid,
+  .vuelos-section .paquetes-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .cardsPaquetes, .cards-vuelos {
+    width: 85%;
+  }
+  .cardsTestimonios {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.flexTituloSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  margin: 15px;
+}
+
+.testimonios-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+}
+
+footer {
+  background-color: rgb(155, 163, 83);
+}
+footer .footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+footer .footer-right {
+  display: flex;
+  gap: 30px;
+}
+footer .info-item {
+  text-align: center;
+}
+footer .footer-column h3 {
+  padding: 5px;
+  margin-bottom: 15px;
+  font-family: sans-serif;
+  color: #333;
+}
+footer .social-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  list-style: none;
+  gap: 35px;
+}
+footer .links-footer {
+  background-color: transparent;
+}
+footer .imagen-footer {
+  width: 30px;
+  transition: transform 0.2s ease-in-out;
+}
+footer .imagen-footer:hover {
+  transform: scale(1.1);
+}
+footer .copyright {
+  text-align: center;
+  margin: 0;
+  padding: 8px;
+  color: #020000;
+  font-size: 18px;
+}
+@media (max-width: 768px) {
+  footer .footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  footer .footer-column {
+    text-align: center;
+  }
+  footer .social-links {
+    justify-content: center;
+  }
+}
+
+.paginas2-3-4-5 {
+  text-align: center;
+  padding: 15px;
+}
+
+.titulo-staff-quienesomos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  padding: 15px;
+}
+
+.flex-staff-quienessomos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .flex-staff-quienessomos {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+.flex-testimonios-pag {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+  padding: 10px;
+  margin: 10px;
+}
+
+.tarjeta-pag-testimonios {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 15px;
+  padding: 10px;
+  border: solid rgb(161, 0, 0);
+}
+.tarjeta-pag-testimonios .imagen-pag-testimonios {
+  margin-right: 30px;
+  width: 100px;
+}
+@media (max-width: 768px) {
+  .tarjeta-pag-testimonios {
+    flex-direction: column;
+  }
+  .tarjeta-pag-testimonios .imagen-pag-testimonios {
+    margin-right: 0;
+    margin-bottom: 15px;
   }
 }
 

@@ -1,0 +1,39 @@
+@use 'variables' as *; 
+
+// ===== ESTILOS BASE Y TIPOGRAFÍA =====
+
+// Reseteo básico
+* {
+    margin: 0;
+    padding: 0;
+}
+
+// Anidación para estilos de tipografía
+h1 {
+    color: $color-primary;
+    font-family: $font-heading;
+    font-size: 4em;
+    text-align: center;
+    padding: 15px;
+}
+
+h2 {
+    color: $color-text-h2;
+}
+
+h3 {
+    color: $color-text-h3;
+}
+
+p {
+    color: $color-text-p;
+}
+
+a {
+    text-decoration: none;
+    background-color: $bg-link;
+    color: $color-text-dark;
+    border-radius: $border-radius-small;
+    padding: 5px;
+    margin: 5px;
+}

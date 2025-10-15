@@ -1,0 +1,16 @@
+# Archivos de configuración de editores
+.vscode/
+
+# Archivos de Sistema Operativo
+.DS_Store
+Thumbs.db
+ntuser.dat*
+
+# Archivos de Log y temporales
+*.log
+*.tmp
+
+# Dependencias (muy útil para el futuro)
+/node_modules/
+
+.tmp.driveupload/

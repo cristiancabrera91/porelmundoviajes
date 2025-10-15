@@ -1,0 +1,41 @@
+// ===== VARIABLES =====
+
+// --- Colores ---
+$color-primary: rgb(179, 255, 0);
+$color-header-footer-bg: rgb(155, 163, 83);
+$color-main-bg: rgba(202, 189, 2, 0.507);
+$color-text-dark: #000000;
+$color-text-light: #fff;
+$color-text-h2: darkgreen;
+$color-text-p: darkred;
+$color-text-h3: darkgoldenrod;
+$color-text-copyright: #020000;
+$color-text-footer-h3: #333;
+
+// Colores de fondo específicos
+$bg-parrafo-paquetes: darkkhaki;
+$bg-parrafo-video: rgb(139, 0, 0);
+$bg-parrafo-testimonio: bisque;
+$bg-link: rgb(198, 172, 216);
+
+// Colores de botones
+$btn-login-bg: #a87fac;
+$btn-comprar-bg: hsl(0, 0%, 95%);
+$btn-comprar-bg-hover: rgb(0, 255, 0);
+$btn-comprar-border: #000000;
+
+// Colores de cards y bordes
+$card-bg: #fff;
+$card-border: 3px solid darkgoldenrod;
+$card-border-testimonios: 3px solid #e9b60d;
+$card-border-pag-testimonios: solid rgb(161, 0, 0);
+$card-shadow: 0 5px 8px rgba(0, 0, 0, 0.904);
+
+// --- Fuentes ---
+$font-heading: "Bungee", sans-serif;
+$font-body: Arial, Helvetica, sans-serif;
+
+// --- Tamaños y Medidas ---
+$border-radius-small: 5px;
+$border-radius-large: 10px;
+$img-login-width: 30px;
