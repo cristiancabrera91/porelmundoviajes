@@ -15,6 +15,18 @@ header {
         }
     }
 
+    // --- CORRECCIÓN APLICADA ---
+    // Estilos generales del título para TODOS los tamaños de pantalla
+    .site-title {
+        color: rgb(179, 255, 0);
+        font-family: "Bungee", sans-serif;
+        font-size: 4em;
+        text-align: center;
+        padding: 15px;
+        // La animación se aplica aquí para todas las vistas
+        animation: fadeInDown 1s ease-out 0.2s forwards;
+    }
+
     .inicio-sesion-flex {
         @include mixins.flex-config(row, flex-end, center);
         gap: 5px;
@@ -30,13 +42,15 @@ header {
         flex-direction: column;
         align-items: center;
         text-align: center;
-
-        h1 {
+        
+        // Sobrescribimos SOLO lo necesario para el título en mobile
+        .site-title {
             font-size: 1.8rem;
             margin-bottom: 20px;
             order: -1;
+            padding: 0; // Ajuste para mobile
         }
-
+        
         nav ul {
             flex-direction: column;
             padding: 0;
@@ -279,13 +293,11 @@ footer {
     margin-bottom: 2rem;
     align-items: center;
 
-    // Asignamos un nombre de área a cada elemento
     .paquete-titulo { grid-area: titulo; }
     .paquete-imagen { grid-area: imagen; }
     .paquete-descripcion { grid-area: descripcion; }
     .paquete-boton { grid-area: boton; }
 
-    // --- Diseño para MÓVIL (por defecto) ---
     grid-template-areas:
         "titulo"
         "imagen"
@@ -296,19 +308,18 @@ footer {
     .paquete-imagen {
         width: 100%;
         max-width: 400px;
-        justify-self: center; // Centra la imagen en el grid
+        justify-self: center;
         border-radius: $border-radius-large;
     }
 
     .paquete-boton {
-        justify-self: center; // Centra el botón
+        justify-self: center;
         @include mixins.style-boton-comprar;
     }
 
-    // --- Diseño para DESKTOP (cuando la pantalla sea más ancha de 768px) ---
     @media (min-width: 768px) {
         text-align: left;
-        grid-template-columns: 300px 1fr; // Columna para la imagen, el resto para el texto
+        grid-template-columns: 300px 1fr;
         grid-template-areas:
             "imagen titulo"
             "imagen descripcion"
@@ -325,17 +336,26 @@ footer {
 }
 
 // --- Estilos para la página de Testimonios ---
-
-// Contenedor para el contenido del testimonio (título y párrafo)
 .testimonio-contenido {
     display: flex;
     flex-direction: column;
 }
 
-// Estilos para el nuevo H3 del testimonio
 .testimonio-contenido h3 {
     font-size: 1.3rem;
     font-weight: 600;
-    margin-bottom: 0.5rem; // Espacio entre el nombre y el texto
-    color: $color-text-dark; // Asumiendo que tienes esta variable
+    margin-bottom: 0.5rem;
+    color: $color-text-dark;
+}
+
+// --- Definición de la Animación (Keyframes) ---
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

@@ -2,9 +2,9 @@
 @use 'variables' as *;
 @use 'mixins';
 
-// COMPONENTES
+// ===== COMPONENTES =====
 
-// estilos base de todas las cards
+// Placeholder para compartir estilos base de todas las cards
 %card-base {
     padding: 10px;
     border: $card-border;
@@ -13,9 +13,17 @@
     background-color: $card-bg;
     box-shadow: $card-shadow;
     overflow: hidden;
+    // --- Transición para la animación ---
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-// Estilos de Cards
+// Efecto de elevación para todas las tarjetas al pasar el cursor
+[class^="cards"]:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+// ----- Estilos de Cards -----
 .cardsPaquetes {
     @extend %card-base;
     display: flex;
@@ -146,7 +154,7 @@
     }
 }
 
-// Estilos de Botones 
+// ----- Estilos de Botones -----
 .botonIniciarSesion {
     background-color: $btn-login-bg;
     border-radius: $border-radius-large;
@@ -178,7 +186,7 @@
     }
 }
 
-// Mas Componentes
+// ----- Otros Componentes -----
 .parrafoDePaquetes {
     background-color: $bg-parrafo-paquetes;
 }
