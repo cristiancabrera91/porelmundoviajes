@@ -323,3 +323,19 @@ footer {
         }
     }
 }
+
+// --- Estilos para la página de Testimonios ---
+
+// Contenedor para el contenido del testimonio (título y párrafo)
+.testimonio-contenido {
+    display: flex;
+    flex-direction: column;
+}
+
+// Estilos para el nuevo H3 del testimonio
+.testimonio-contenido h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem; // Espacio entre el nombre y el texto
+    color: $color-text-dark; // Asumiendo que tienes esta variable
+}

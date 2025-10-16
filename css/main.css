@@ -561,4 +561,16 @@ footer .copyright {
   }
 }
 
+.testimonio-contenido {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonio-contenido h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #000000;
+}
+
 /*# sourceMappingURL=main.css.map */
