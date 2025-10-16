@@ -1,5 +1,6 @@
 @use 'variables' as *;
 @use 'mixins';
+
 // --- Header ---
 header {
     margin: 0 0 20px 0;
@@ -140,14 +141,12 @@ main {
 
 // Contenedores Flex
 .flexTituloSection {
-    @include mixins.flex-config
- (row, center);
+    @include mixins.flex-config(row, center);
     margin: 15px;
 }
 
 .testimonios-container {
-    @include mixins.flex-config
- (row, center);
+    @include mixins.flex-config(row, center);
     flex-wrap: wrap;
     gap: 20px;
     width: 100%;
@@ -158,8 +157,7 @@ footer {
     background-color: $color-header-footer-bg;
 
     .footer-container {
-        @include mixins.flex-config
- (row, space-around, flex-start);
+        @include mixins.flex-config(row, space-around, flex-start);
         margin-bottom: 20px;
     }
 
@@ -180,8 +178,7 @@ footer {
     }
 
     .social-links {
-        @include mixins.flex-config
- (row);
+        @include mixins.flex-config(row);
         list-style: none;
         gap: 35px;
     }
@@ -224,7 +221,7 @@ footer {
 
 // --- Estilos Específicos de Páginas ---
 
-// Página "Paquetes"
+// Título general para las subpáginas
 .paginas2-3-4-5 {
     text-align: center;
     padding: 15px;
@@ -232,14 +229,12 @@ footer {
 
 // Página "Quiénes Somos"
 .titulo-staff-quienesomos {
-    @include mixins.flex-config
- (row, center);
+    @include mixins.flex-config(row, center);
     padding: 15px;
 }
 
 .flex-staff-quienessomos {
-    @include mixins.flex-config
- (row, space-around, center);
+    @include mixins.flex-config(row, space-around, center);
     width: 100%;
 
     @media (max-width: 768px) {
@@ -250,16 +245,14 @@ footer {
 
 // Página "Testimonios"
 .flex-testimonios-pag {
-    @include mixins.flex-config
- (row, flex-start, stretch);
+    @include mixins.flex-config(row, flex-start, stretch);
     flex-wrap: wrap;
     padding: 10px;
-    margin: 10px; // Corregido de '10' a '10px'
+    margin: 10px;
 }
 
 .tarjeta-pag-testimonios {
-    @include mixins.flex-config
- (row, flex-start, center);
+    @include mixins.flex-config(row, flex-start, center);
     margin: 15px;
     padding: 10px;
     border: $card-border-pag-testimonios;
@@ -275,6 +268,58 @@ footer {
         .imagen-pag-testimonios {
             margin-right: 0;
             margin-bottom: 15px;
+        }
+    }
+}
+
+// --- Estilos para la página de Paquetes con CSS Grid ---
+.paquete-card {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    align-items: center;
+
+    // Asignamos un nombre de área a cada elemento
+    .paquete-titulo { grid-area: titulo; }
+    .paquete-imagen { grid-area: imagen; }
+    .paquete-descripcion { grid-area: descripcion; }
+    .paquete-boton { grid-area: boton; }
+
+    // --- Diseño para MÓVIL (por defecto) ---
+    grid-template-areas:
+        "titulo"
+        "imagen"
+        "descripcion"
+        "boton";
+    text-align: center;
+
+    .paquete-imagen {
+        width: 100%;
+        max-width: 400px;
+        justify-self: center; // Centra la imagen en el grid
+        border-radius: $border-radius-large;
+    }
+
+    .paquete-boton {
+        justify-self: center; // Centra el botón
+        @include mixins.style-boton-comprar;
+    }
+
+    // --- Diseño para DESKTOP (cuando la pantalla sea más ancha de 768px) ---
+    @media (min-width: 768px) {
+        text-align: left;
+        grid-template-columns: 300px 1fr; // Columna para la imagen, el resto para el texto
+        grid-template-areas:
+            "imagen titulo"
+            "imagen descripcion"
+            "imagen boton";
+
+        .paquete-imagen {
+            justify-self: start;
+        }
+
+        .paquete-boton {
+            justify-self: start;
         }
     }
 }

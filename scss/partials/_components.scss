@@ -154,18 +154,7 @@
 }
 
 .boton-comprar-paquetes {
-    margin: 15px;
-    background-color: $btn-comprar-bg;
-    color: $color-text-dark;
-    border-color: $btn-comprar-border;
-    width: 30%;
-    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
-    font-family: $font-body;
-
-    &:hover {
-        border-color: $btn-comprar-border;
-        background-color: $btn-comprar-bg-hover;
-    }
+    @include mixins.style-boton-comprar;
 }
 
 .buttom-testimonios {
