@@ -1,7 +1,7 @@
 @use 'variables' as *;
 @use 'mixins';
 
-// --- Header ---
+//Header
 header {
     margin: 0 0 20px 0;
     background-color: $color-header-footer-bg;
@@ -15,15 +15,15 @@ header {
         }
     }
 
-    // --- CORRECCIÓN APLICADA ---
-    // Estilos generales del título para TODOS los tamaños de pantalla
+    // Estilos generales del titulo para tamaños de pantalla
     .site-title {
         color: rgb(179, 255, 0);
         font-family: "Bungee", sans-serif;
         font-size: 4em;
         text-align: center;
         padding: 15px;
-        // La animación se aplica aquí para todas las vistas
+
+        // la animación mas trucha que pude hacer
         animation: fadeInDown 1s ease-out 0.2s forwards;
     }
 
@@ -37,18 +37,18 @@ header {
         }
     }
 
-    // Media query para mobile anidada
+    // Media query mobil anidishon
     @media (max-width: 768px) {
         flex-direction: column;
         align-items: center;
         text-align: center;
         
-        // Sobrescribimos SOLO lo necesario para el título en mobile
+        
         .site-title {
             font-size: 1.8rem;
             margin-bottom: 20px;
             order: -1;
-            padding: 0; // Ajuste para mobile
+            padding: 0; 
         }
         
         nav ul {
@@ -68,7 +68,7 @@ header {
     }
 }
 
-// --- Main ---
+//Main
 main {
     background-color: $color-main-bg;
     margin: 0 0 20px 0;
@@ -81,7 +81,7 @@ main {
     }
 }
 
-// --- Grid Layout ---
+//Grid Layout
 .contenedor-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -94,7 +94,7 @@ main {
     overflow: hidden;
     object-fit: cover;
 
-    // Media query anidada para la grilla
+    // Media query anideishon xa grid
     @media (max-width: 768px) {
         grid-template-columns: 1fr;
         grid-template-areas:
@@ -106,7 +106,6 @@ main {
     }
 }
 
-// Secciones del Grid
 .paquetes-section {
     grid-area: paquetes;
     .paquetes-grid {
@@ -137,7 +136,7 @@ main {
     }
 }
 
-// Media query compartida para las secciones del grid
+// Media query xa secciones del grid
 @media (max-width: 768px) {
     .paquetes-section .paquetes-grid,
     .vuelos-section .paquetes-grid {
@@ -153,7 +152,7 @@ main {
     }
 }
 
-// Contenedores Flex
+//contenedores flex
 .flexTituloSection {
     @include mixins.flex-config(row, center);
     margin: 15px;
@@ -166,7 +165,7 @@ main {
     width: 100%;
 }
 
-// --- Footer ---
+//footer 
 footer {
     background-color: $color-header-footer-bg;
 
@@ -217,7 +216,7 @@ footer {
         font-size: 18px;
     }
 
-    // Media query anidada para el footer
+    // Media query anideishon footer
     @media (max-width: 768px) {
         .footer-container {
             flex-direction: column;
@@ -233,15 +232,12 @@ footer {
     }
 }
 
-// --- Estilos Específicos de Páginas ---
-
-// Título general para las subpáginas
 .paginas2-3-4-5 {
     text-align: center;
     padding: 15px;
 }
 
-// Página "Quiénes Somos"
+//pag Quienes somos
 .titulo-staff-quienesomos {
     @include mixins.flex-config(row, center);
     padding: 15px;
@@ -257,7 +253,7 @@ footer {
     }
 }
 
-// Página "Testimonios"
+//pag Testimonios
 .flex-testimonios-pag {
     @include mixins.flex-config(row, flex-start, stretch);
     flex-wrap: wrap;
@@ -286,7 +282,7 @@ footer {
     }
 }
 
-// --- Estilos para la página de Paquetes con CSS Grid ---
+//estilo para la página de Paquetes grid
 .paquete-card {
     display: grid;
     gap: 1rem;
@@ -335,7 +331,7 @@ footer {
     }
 }
 
-// --- Estilos para la página de Testimonios ---
+//estilos para la pag Testimonios
 .testimonio-contenido {
     display: flex;
     flex-direction: column;
@@ -348,7 +344,7 @@ footer {
     color: $color-text-dark;
 }
 
-// --- Definición de la Animación (Keyframes) ---
+// Animación de + arriba me olvide el key
 @keyframes fadeInDown {
     0% {
         opacity: 0;

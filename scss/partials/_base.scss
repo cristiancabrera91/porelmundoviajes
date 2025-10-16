@@ -1,14 +1,14 @@
 @use 'variables' as *; 
 
-// ===== ESTILOS BASE Y TIPOGRAFÍA =====
+// ESTILOS BASE Y TIPOGRAFIA
 
-// Reseteo básico
+//reseteo 
 * {
     margin: 0;
     padding: 0;
 }
 
-// Anidación para estilos de tipografía
+//anideishon tipografia
 h1 {
     color: $color-primary;
     font-family: $font-heading;

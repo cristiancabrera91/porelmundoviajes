@@ -1,6 +1,6 @@
 @use 'variables' as *;
 
-// ===== MIXINS =====
+//MIXINS
 
 @mixin flex-config($direction: row, $justify: flex-start, $align: stretch) {
     display: flex;
@@ -9,7 +9,7 @@
     align-items: $align;
 }
 
-// Mixin para los estilos del botón de compra
+// Mixin para los estilos del boton compra
 @mixin style-boton-comprar {
     margin: 15px;
     background-color: $btn-comprar-bg;
@@ -18,7 +18,6 @@
     width: 30%;
     box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
     font-family: $font-body;
-    // Importante añadir las propiedades del botón de Bootstrap para consistencia
     display: inline-block;
     font-weight: 400;
     line-height: 1.5;
