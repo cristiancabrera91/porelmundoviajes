@@ -267,7 +267,7 @@ header .inicio-sesion-flex {
   padding: 5px;
 }
 header .inicio-sesion-flex .imagen-login {
-  width: 30px;
+  width: 40px;
 }
 @media (max-width: 768px) {
   header {
@@ -302,7 +302,7 @@ main {
   box-sizing: content-box;
 }
 main .imagenUsuarioTestimonios {
-  width: 30px;
+  width: 40px;
   margin: 15px;
 }
 
