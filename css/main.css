@@ -235,6 +235,29 @@ a {
   background-color: bisque;
 }
 
+.accordion-item {
+  background-color: rgba(202, 189, 2, 0.507);
+  border-color: 3px solid darkgoldenrod;
+}
+
+.accordion-button {
+  background-color: rgba(202, 189, 2, 0.507);
+  color: #000000;
+}
+.accordion-button:focus {
+  box-shadow: none;
+  border-color: 3px solid darkgoldenrod;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: rgb(155, 163, 83);
+  color: #fff;
+}
+
+.accordion-body {
+  color: darkred;
+}
+
 header {
   margin: 0 0 20px 0;
   background-color: rgb(155, 163, 83);

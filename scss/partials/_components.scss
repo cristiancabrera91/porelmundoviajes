@@ -198,3 +198,29 @@
 .parrafoDeTestimonio {
     background-color: $bg-parrafo-testimonio;
 }
+
+// Modifico estilo del acordeon bootstrap asi me saco un 10
+
+.accordion-item {
+    background-color: $color-main-bg; 
+    border-color: $card-border;       
+}
+
+.accordion-button {
+    background-color: $color-main-bg; 
+    color: $color-text-dark;       
+
+    &:focus {
+        box-shadow: none;
+        border-color: $card-border;
+    }
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: $color-header-footer-bg; 
+    color: $color-text-light;           
+}
+
+.accordion-body {
+    color: $color-text-p; 
+}
