@@ -224,3 +224,11 @@
 .accordion-body {
     color: $color-text-p; 
 }
+
+//estilo nav mobile 
+
+.navbar.d-lg-none {
+    // Le decimos que SOLAMENTE el navbar mobile 
+    // (el que se oculta en 'lg') tenga tu color.
+    background-color: $color-header-footer-bg;
+}

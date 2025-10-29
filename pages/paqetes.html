@@ -16,7 +16,7 @@
 
 <body>
     <header>
-        <nav>
+        <nav class="d-none d-lg-block">
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="#">Paquetes</a></li>
@@ -25,9 +25,39 @@
                 <li><a href="destinos.html">Destinos</a></li>
             </ul>
         </nav>
+
+        <nav class="navbar navbar-light d-lg-none">
+            <div class="container-fluid justify-content-end"> 
+        
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerMobile" aria-controls="navbarTogglerMobile" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <div class="collapse navbar-collapse" id="navbarTogglerMobile">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Paquetes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="quienes-somos.html">Quienes somos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="testimonios.html">Testimonios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="destinos.html">Destinos internacionales</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
         <h1 class="site-title">Por el mundo viajes</h1>
         <div class="inicio-sesion-flex">
-            <img src="../assets/imagen.html/acceso.png" alt="imagen del logo de la empresa" class="imagen-login">
+            <img src="../assets/imagen.html/expe1.png" alt="imagen del logo de la empresa" class="imagen-login">
             <a href="/login" class="botonIniciarSesion">Iniciar Sesión</a>
         </div>
     </header>

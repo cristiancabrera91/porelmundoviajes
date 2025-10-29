@@ -32,6 +32,18 @@ a {
   margin: 5px;
 }
 
+.navbar-light .navbar-nav .nav-link {
+  text-decoration: none;
+  background-color: rgb(198, 172, 216);
+  color: #000000;
+  border-radius: 5px;
+  display: inline-block;
+  width: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 8px 12px;
+}
+
 .card-pag-paquetes, .cards-vuelos, .cardsTestimonios, .cardsDestinos, .cardsPaquetes {
   padding: 10px;
   border: 3px solid darkgoldenrod;
@@ -256,6 +268,10 @@ a {
 
 .accordion-body {
   color: darkred;
+}
+
+.navbar.d-lg-none {
+  background-color: rgb(155, 163, 83);
 }
 
 header {
